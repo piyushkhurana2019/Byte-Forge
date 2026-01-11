@@ -9,9 +9,9 @@ import { SiteFooter } from "@/components/site-footer"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Byte Forge",
+  description: "Engineering premium web & AI solutions",
+  generator: "Byte Forge",
 }
 
 export default function RootLayout({

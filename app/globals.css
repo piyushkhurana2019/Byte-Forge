@@ -122,6 +122,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer utilities {
@@ -148,7 +151,63 @@
 
   @media (prefers-reduced-motion: no-preference) {
     .animate-float {
-      animation: float-y 6s ease-in-out infinite;
+      animation: float-y 3s ease-in-out infinite;
+    }
+  }
+
+  .parallax-panel {
+    background-image: radial-gradient(circle at top, color-mix(in oklab, var(--color-primary) 20%, transparent), transparent 60%),
+      linear-gradient(120deg, color-mix(in oklab, var(--color-foreground) 6%, transparent), transparent 70%);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    .parallax-panel {
+      background-attachment: scroll;
+    }
+  }
+
+  .process-track {
+    position: relative;
+  }
+
+  .process-track::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: color-mix(in oklab, var(--color-foreground) 16%, transparent);
+  }
+
+  .process-track::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 4px;
+    height: 120px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, transparent, var(--color-primary), transparent);
+    animation: process-glow 3.2s ease-in-out infinite;
+  }
+
+  @media (min-width: 768px) {
+    .process-track::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .process-track::after {
+      left: calc(50% - 2px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .process-track::after {
+      animation: none;
     }
   }
 }
@@ -159,6 +218,21 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes process-glow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(220px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(440px);
+    opacity: 0.2;
   }
 }

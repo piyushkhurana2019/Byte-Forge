@@ -7,14 +7,17 @@ export function SiteFooter() {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Byte Forge. All rights reserved.</p>
           <nav className="flex items-center gap-4 text-sm">
-            <Link href="/portfolio" className="hover:text-primary">
+            <Link href="/#" className="hover:text-primary">
+              Home
+            </Link>
+            <Link href="/#services" className="hover:text-primary">
+              Services
+            </Link>
+            <Link href="/#portfolio" className="hover:text-primary">
               Portfolio
             </Link>
-            <Link href="/join-us" className="hover:text-primary">
-              Join Us
-            </Link>
-            <Link href="/contact" className="hover:text-primary">
-              Contact
+            <Link href="/#contact" className="hover:text-primary">
+              Contact Us
             </Link>
           </nav>
         </div>

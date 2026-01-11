@@ -8,10 +8,8 @@ import { cn } from "@/lib/utils"
 export function AnimatedSection({
   className,
   children,
-}: {
-  className?: string
-  children: React.ReactNode
-}) {
+  ...props
+}: React.ComponentPropsWithoutRef<"section">) {
   const ref = useRef<HTMLDivElement | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -38,6 +36,7 @@ export function AnimatedSection({
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
         className,
       )}
+      {...props}
     >
       {children}
     </section>
