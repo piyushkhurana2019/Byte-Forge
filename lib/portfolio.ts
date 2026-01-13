@@ -25,11 +25,11 @@ export const portfolioProjects: PortfolioProject[] = [
     demo: "https://drive.google.com/file/d/1M7LdAAyB1B9WMUZkiPh-koCwlDWyL2tR/view?usp=sharing",
   },
   {
-    slug: "portfolio-website",
-    title: "Portfolio Website",
-    tagline: "Portfolio website to showcase a client's work",
-    summary: "A clean, minimal portfolio layout that keeps the focus on case studies.",
-    shots: ["/placeholder.jpg"],
-    demo: "https://example.com/demo-analytics",
+    slug: "ecommerce-website",
+    title: "Ecommerce Website",
+    tagline: "Ecommerce website for a jewellery store",
+    summary: "A clean, minimal ecommerce layout that keeps the focus on case studies.",
+    shots: ["/ecommerce1.png", "/ecommerce2.png", "/ecommerce3.png", "/ecommerce4.png"],
+    demo: "https://drive.google.com/file/d/1yjTJbOisKKFU1-Fuk7bBL9EIMyIyZnau/view?usp=sharing",
   },
 ]

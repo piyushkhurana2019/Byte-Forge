@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { portfolioProjects } from "@/lib/portfolio"
 
 export default function PortfolioWebsitePage() {
-  const project = portfolioProjects.find((item) => item.slug === "portfolio-website")
+  const project = portfolioProjects.find((item) => item.slug === "ecommerce-website")
   if (!project) notFound()
 
   return (
